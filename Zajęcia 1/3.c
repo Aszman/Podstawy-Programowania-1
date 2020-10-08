@@ -9,6 +9,5 @@ int main()
     scanf("%49s %49s", im, naz);
     printf("%s %s\n", naz, im);
     
-    return 0;
-    
+    return 0;    
 }
