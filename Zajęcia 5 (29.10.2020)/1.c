@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-    for (int i =0; i<argc; ++i)  /* do repo */
+    for (int i =0; i<argc; ++i)
     {   
         puts(argv[i]);
     }
