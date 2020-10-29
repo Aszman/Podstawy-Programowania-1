@@ -4,7 +4,7 @@
 void zlozenie(char *a, char *b)
 {
     static int count = 1;
-    printf("%i: %s %s\n",count,a, b); /* do repo*/
+    printf("%i: %s %s\n",count,a, b);
     ++count;
 }
 
