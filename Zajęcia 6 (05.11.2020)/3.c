@@ -3,7 +3,7 @@
 
 void ddouble(int size, int *dynTablica)
 {
-    dynTablica = realloc(dynTablica, 2*size * sizeof(*dynTablica));   //do repo
+    dynTablica = realloc(dynTablica, 2*size * sizeof(*dynTablica));
     
     for(int i = size; i < 2*size; ++i)
     {
