@@ -10,7 +10,7 @@ void swaptext(char *t1, char *t2)
         *t1 = *t2;
         *t2 = tmp;
         t1 = t1 + 1;
-        t2 = t2 + 1;                            /*do repo */
+        t2 = t2 + 1;                            
     }    
 }
 
