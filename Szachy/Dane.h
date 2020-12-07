@@ -14,16 +14,16 @@ typedef struct bierka
     int specjalne;  //roszada (krol/wieza) lub skok(pionek)   1 - moze    0 - nie moze
 }bierka;
 
-const bierka K_b = {1, "Król", "\u2654", 5, 1000, 1};
-const bierka K_c = {-1, "Król", "\u265A", 5, -1000, 1};
+bierka K_b = {1, "Król", "\u2654", 5, 1000, 1};
+bierka K_c = {-1, "Król", "\u265A", 5, -1000, 1};
 
 // Hetman
 const bierka H_b = {1, "Hetman", "\u2655", 4, 9, 0};
 const bierka H_c = {-1, "Hetman", "\u265B", 4, -9, 0};
 
 // Wieża
-const bierka W_b = {1, "Wieża", "\u2656", 3, 5, 1};
-const bierka W_c = {-1, "Wieża", "\u265C", 3, 5, 1};
+bierka W_b = {1, "Wieża", "\u2656", 3, 5, 1};
+bierka W_c = {-1, "Wieża", "\u265C", 3, -5, 1};
 
 // Goniec
 const bierka G_b = {1, "Goniec", "\u2657", 2, 3, 0};
@@ -34,13 +34,20 @@ const bierka S_b = {1, "Skoczek", "\u2658", 1, 3, 0};
 const bierka S_c = {-1, "Skoczek", "\u265E", 1, -3, 0};
 
 //Pionek
-const bierka P_b = {1, "Pionek", "\u2659", 0, 1, 1};
-const bierka P_c = {-1, "Pionek", "\u265F", 0, 1, 1};
+bierka P_b = {1, "Pionek", "\u2659", 0, 1, 1};
+bierka P_c = {-1, "Pionek", "\u265F", 0, -1, 1};
 
 // Puste pole
-const bierka N = {0, "Puste", "-", -1, 0};
+const bierka N = {0, "Puste", "-", -1, 0, 0};
 
 //Prototypy funkcji
+
+
+//main.c
+void wyswietlanie(bierka[8][8]);
+int sprawdzenie(bierka[8][8], int);
+void ruchGracza(bierka[8][8], int);
+int oceniajaca(bierka[8][8], int);
 
 //ruchyFigur.c
 int ruchFigury(int, int, int, int, bierka[8][8]);
@@ -51,9 +58,8 @@ int ruchWieza(int, int, int, int, bierka*, bierka*, bierka[8][8]);
 int ruchHetman(int, int, int, int, bierka*, bierka*, bierka[8][8]);
 int ruchKrol(int, int, bierka*, bierka*);
 
-//main.c
-void wyswietlanie(bierka[8][8]);
-int sprawdzenie(bierka[8][8], int);
+//ruchyGraczy.c
+int ruchAI(bierka[8][8],int, int, int, int, int);
 void ruchGracza(bierka[8][8], int);
 
 
