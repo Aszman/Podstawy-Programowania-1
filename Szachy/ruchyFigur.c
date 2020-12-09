@@ -41,7 +41,6 @@ int ruchFigury(int n_F,int m_F,int n_K,int m_K, bierka szachownica[8][8])
     return poprawne;
 }
 
-
 int ruchPionek(int n_F, int m_F, int n_K, int m_K, bierka *PoleF, bierka *PoleK, bierka szachownica[8][8])
 {
     if (n_F + 2*PoleF->druzyna == n_K && m_K == m_F && PoleK->druzyna==0 && PoleF->specjalne==1 && szachownica[7-n_F-PoleF->druzyna][m_F].ID==-1)
@@ -287,4 +286,3 @@ int ruchKrol(int dn, int dm, bierka *PoleF, bierka *PoleK)
 
     return 0;
 }
-

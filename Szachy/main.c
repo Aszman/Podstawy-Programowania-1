@@ -68,8 +68,8 @@ void vsAI()
 
         printf("\n===Tura czarnych===");
         printf("\nRuch AI\n\n");
-        getchar();
-        ruchAI(szachownica, -1, -1, GLEBOKOSC, GLEBOKOSC, -2000, 2000);
+
+        ruchAI(szachownica, -1, -1, GLEBOKOSC, GLEBOKOSC, -20000, 20000);
 
         wyswietlanie(szachownica);
         if (sprawdzenie(szachownica, 1)  == 1)
@@ -162,7 +162,7 @@ int oceniajaca(bierka szachownica[8][8], int flaga)
     {
         for (int j = 0; j<=7; ++j)
         {
-            suma += szachownica[i][j].wartosc;
+            suma += heurystyka[szachownica[i][j].wartosc][i][j];
         }
     }
     suma *= flaga;
