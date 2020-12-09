@@ -1,7 +1,7 @@
 #ifndef DANE_H_INCLUDED
 #define DANE_H_INCLUDED
 
-
+#define GLEBOKOSC 7
 
 typedef struct bierka
 {
@@ -14,6 +14,7 @@ typedef struct bierka
     int specjalne;  //roszada (krol/wieza) lub skok(pionek)   1 - moze    0 - nie moze
 }bierka;
 
+// Król
 bierka K_b = {1, "Król", "\u2654", 5, 1000, 1};
 bierka K_c = {-1, "Król", "\u265A", 5, -1000, 1};
 
@@ -40,14 +41,16 @@ bierka P_c = {-1, "Pionek", "\u265F", 0, -1, 1};
 // Puste pole
 const bierka N = {0, "Puste", "-", -1, 0, 0};
 
-//Prototypy funkcji
 
+//Prototypy funkcji
 
 //main.c
 void wyswietlanie(bierka[8][8]);
 int sprawdzenie(bierka[8][8], int);
 void ruchGracza(bierka[8][8], int);
 int oceniajaca(bierka[8][8], int);
+void vsAI();
+void vsPlayer();
 
 //ruchyFigur.c
 int ruchFigury(int, int, int, int, bierka[8][8]);
@@ -59,7 +62,7 @@ int ruchHetman(int, int, int, int, bierka*, bierka*, bierka[8][8]);
 int ruchKrol(int, int, bierka*, bierka*);
 
 //ruchyGraczy.c
-int ruchAI(bierka[8][8],int, int, int, int, int);
+int ruchAI(bierka[8][8],int, int, int, int, int, int);
 void ruchGracza(bierka[8][8], int);
 
 

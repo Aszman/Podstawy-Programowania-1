@@ -143,7 +143,7 @@ int ruchWieza(int n_F, int m_F, int n_K, int m_K, bierka *PoleF, bierka *PoleK, 
     {
         for (int i=1; i < abs(m_K-m_F); ++i)
         {
-            if (szachownica[n_F][m_F+i].druzyna != 0)
+            if (szachownica[7-n_F][m_F+i].druzyna != 0)
             {
                 return 0;
             }
@@ -163,7 +163,7 @@ int ruchWieza(int n_F, int m_F, int n_K, int m_K, bierka *PoleF, bierka *PoleK, 
     {
         for (int i=1; i < abs(m_K-m_F); ++i)
         {
-            if (szachownica[n_F][m_F-i].druzyna != 0)
+            if (szachownica[7-n_F][m_F-i].druzyna != 0)
             {
                 return 0;
             }
@@ -234,7 +234,7 @@ int ruchHetman(int n_F, int m_F, int n_K, int m_K, bierka *PoleF, bierka *PoleK,
     {
         for (int i=1; i < abs(m_K-m_F); ++i)
         {
-            if (szachownica[n_F][m_F+i].druzyna != 0)
+            if (szachownica[7-n_F][m_F+i].druzyna != 0)
             {
                 return 0;
             }
@@ -254,7 +254,7 @@ int ruchHetman(int n_F, int m_F, int n_K, int m_K, bierka *PoleF, bierka *PoleK,
     {
         for (int i=1; i < abs(m_K-m_F); ++i)
         {
-            if (szachownica[n_F][m_F-i].druzyna != 0)
+            if (szachownica[7-n_F][m_F-i].druzyna != 0)
             {
                 return 0;
             }
